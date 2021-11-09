@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body,
+html {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --main-dark-color: hsl(210, 10%, 23%);
+  --main-darker-color: hsl(210, 10%, 18%);
+  --main-light-color: hsl(210, 10%, 28%);
+  --main-lighter-color: hsl(210, 10%, 33%);
+}
+#root {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: var(--main-dark-color);
+}
+.container {
+  padding: 0 !important;
+}
+.chat {
+  height: 500px;
+  width: 1000px;
+  background-color: var(--main-light-color);
+}
+.message {
+  background-color: var(--main-lighter-color);
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+.user-message {
+  width: 200px;
+  border-radius: 15px;
+}
+.from-user {
+  padding-left: 0.5rem;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.message-container {
+  height: 90%;
+  color: #fff;
+  padding-top: 0.25rem;
+  border-radius: 15px;
+  padding-left: 1rem !important;
+  padding-top: 0.25rem !important;
+  overflow-y: scroll;
+}
+.chat-input {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: var(--main-lighter-color);
+  background-clip: padding-box;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  height: 100%;
+}
+
+.chat-input:focus {
+  outline: none;
+  border: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+.chat-input::placeholder {
+  color: #fff;
+}
+.dark {
+  background-color: var(--main-dark-color) !important;
+  border: 5px solid var(--main-lighter-color) !important;
+  /* border: none !important; */
+}
+.dark:focus {
+  box-shadow: none !important;
+}
+aside {
+  height: 538px;
+  width: 300px;
+  background-color: var(--main-darker-color);
+  color: #fff;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
